@@ -1,0 +1,8 @@
+jenkins:
+  build: .
+  container_name: jenkins_ci
+  ports:
+    - "8083:8080"
+    - "50000:50000"
+  volumes:
+      - ./jobs/.:/var/jenkins_home/jobs/
